@@ -12,7 +12,7 @@ export class DynamicComponent implements OnInit {
 
   constructor(private router: Router ) {
     router.events.subscribe( (val) => {
-          this.active_route = val.url;
+          //this.active_route = val.url;
       });
   }
 
