@@ -24,6 +24,9 @@ a {
 .mat-list-item.menu-list-item.expanded{
   background:red;
 }
+.mat-list-item.menu-list-item.active.expanded{
+  background: #fc6262!important;
+}
 
 .container{
   padding:2em;

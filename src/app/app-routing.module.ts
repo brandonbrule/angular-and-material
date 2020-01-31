@@ -11,13 +11,12 @@ const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'form', component: FormComponent, pathMatch: 'full'},
   {path: 'help', component: HelpComponent, pathMatch: 'full'},
+  
   {path: 'nav-item-1', component: DynamicComponent, children: [
     {path: 'child-1', children: [
       {path: 'child-2', component: DynamicComponent},
-      {path: 'become-angular-tailer', component: DynamicComponent},
-      {path: 'material-design', component: DynamicComponent},
-      {path: 'what-up-web', component: DynamicComponent}
     ]},
+
     {path: 'speakers', children: [
       {path: 'michael-prentice', children: [
         {path: 'material-design', component: DynamicComponent}

@@ -15,6 +15,11 @@ export class AppComponent implements AfterViewInit {
   version = VERSION;
   navItems: NavItem[] = [
     {
+      displayName: 'Home',
+      iconName: 'home',
+      route: '/'
+    },
+    {
       displayName: 'Nav Item 1',
       iconName: 'videocam',
       route: 'nav-item-1',
