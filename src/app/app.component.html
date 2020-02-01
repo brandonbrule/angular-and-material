@@ -1,12 +1,56 @@
-<app-top-nav class="fixed-topnav" fxHide.gt-xs></app-top-nav>
+<!-- <app-top-nav class="fixed-topnav" fxHide.gt-xs></app-top-nav>
+
 <mat-sidenav-container>
+
   <mat-sidenav #appDrawer mode="over" opened="false">
     <mat-nav-list>
       <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
     </mat-nav-list>
   </mat-sidenav>
+
   <app-top-nav fxHide.xs></app-top-nav>
   <router-outlet></router-outlet>
+
   <div fxFlex></div>
+  
   <span class="version-info">Current build: {{version.full ? version.full : version}}</span>
+
+</mat-sidenav-container>
+ -->
+
+
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar>Menu</mat-toolbar>
+    
+    <mat-nav-list>
+      <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><a href="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>Abrazo8</span>
+    </mat-toolbar>
+    
+    <!-- <app-top-nav fxHide.xs></app-top-nav> -->
+    
+
+    <!-- Add Content Here -->
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
 </mat-sidenav-container>
