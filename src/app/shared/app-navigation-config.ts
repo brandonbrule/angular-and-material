@@ -1,42 +1,42 @@
 export var AppNavigationConfig = [
     {
-        displayName: 'Home',
-        iconName: 'home',
+        label: 'Home',
+        icon: 'home',
         route: '/'
       },
   
       {
-        displayName: 'Users',
-        iconName: 'home',
+        label: 'Users',
+        icon: 'home',
         route: '/users/'
       },
       
       {
-        displayName: 'Help',
-        iconName: 'info',
+        label: 'Help',
+        icon: 'info',
         route: 'help'
       },
   
       {
-        displayName: 'Form',
-        iconName: 'info',
+        label: 'Form',
+        icon: 'info',
         route: 'form'
       },
   
       {
-        displayName: 'Nav Item 1',
-        iconName: 'videocam',
+        label: 'Nav Item 1',
+        icon: 'videocam',
         route: 'nav-item-1',
         children: [
           {
-            displayName: 'Nav Item 1 - C(1)',
-            iconName: 'group',
+            label: 'Nav Item 1 - C(1)',
+            icon: 'group',
             route: 'nav-item-1/child-1',
           },
   
           {
-            displayName: 'Nav Item 1 - C(3)',
-            iconName: 'feedback',
+            label: 'Nav Item 1 - C(3)',
+            icon: 'feedback',
             route: 'feedback'
           }
         ]

@@ -1,25 +1,25 @@
 export var NavigationConfig = [
     {
-        displayName: 'Help',
-        iconName: 'info',
+        label: 'Help',
+        icon: 'info',
         route: 'help',
         children: [
           {
-            displayName: 'Forms',
-            iconName: 'group',
+            label: 'Forms',
+            icon: 'group',
             route: 'form',
           },
   
           {
-            displayName: 'Help - C(2)',
-            iconName: 'group',
+            label: 'Help - C(2)',
+            icon: 'group',
             route: 'help',
           },
         ]
       },
       {
-        displayName: 'Forms',
-        iconName: 'info',
+        label: 'Forms',
+        icon: 'info',
         route: 'form',
       }
   ];
