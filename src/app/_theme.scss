@@ -58,9 +58,43 @@ $md-mcgpalette1: (
     )
 );
 
+$md-mcgpalette2: (
+    50 : #e6f1fb,
+    100 : #c0dcf5,
+    200 : #96c5ef,
+    300 : #6baee9,
+    400 : #4c9ce4,
+    500 : #2c8bdf,
+    600 : #2783db,
+    700 : #2178d7,
+    800 : #1b6ed2,
+    900 : #105bca,
+    A100 : #f8fbff,
+    A200 : #c5daff,
+    A400 : #92baff,
+    A700 : #79a9ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
 // Define the theme.
 $app-primary: mat-palette($md-mcgpalette1);
-$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-accent:  mat-palette($md-mcgpalette2, A200, A100, A400);
 $app-theme:   mat-dark-theme($app-primary, $app-accent);
 
 // Include the theme styles for only specified components.
