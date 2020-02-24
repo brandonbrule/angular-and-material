@@ -1,3 +1,5 @@
+/*
+
 @import '~@angular/material/theming';
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
@@ -11,3 +13,57 @@ $app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+
+*/
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+$md-mcgpalette1: (
+    50 : #fcece0,
+    100 : #f8d0b3,
+    200 : #f4b080,
+    300 : #ef904d,
+    400 : #eb7926,
+    500 : #e86100,
+    600 : #e55900,
+    700 : #e24f00,
+    800 : #de4500,
+    900 : #d83300,
+    A100 : #ffffff,
+    A200 : #ffd5cd,
+    A400 : #ffab9a,
+    A700 : #ff9680,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the theme.
+$app-primary: mat-palette($md-mcgpalette1);
+$app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$app-theme:   mat-dark-theme($app-primary, $app-accent);
+
+// Include the theme styles for only specified components.
+@include mat-core-theme($app-theme);
+@include mat-button-theme($app-theme);
+@include mat-checkbox-theme($app-theme);
