@@ -44,15 +44,26 @@ export class MenuListItemComponent implements OnInit {
 
   onItemSelected(item: NavItem) {
 
-    console.log(item);
     if (!item.children || !item.children.length) {
-      this.router.navigate([item.route]);
+
+      //this.router.navigate([item.route]);
+      this.router.navigate([item.route]).then(nav => {
+        console.log(nav); // true if navigation is successful
+      }, err => {
+        console.log(err) // when there's an error
+      });
       this.navService.closeNav();
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
       if(item.route){
-        this.router.navigate([item.route]);
+        
+        this.router.navigate([item.route]).then(nav => {
+          console.log(nav); // true if navigation is successful
+        }, err => {
+          console.log(err) // when there's an error
+        });
+        
       }
 
     }

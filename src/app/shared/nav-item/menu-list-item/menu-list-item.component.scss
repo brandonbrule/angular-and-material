@@ -1,4 +1,4 @@
-@import '../theme';
+@import '../../../theme';
 
 :host {
   display: flex;
@@ -6,9 +6,6 @@
   outline: none;
   width: 100%;
 
-  .mat-list-item.active {
-    background-color: mat-color($app-primary, 50);
-  }
   &:hover,
   &:focus {
     >.mat-list-item:not(.expanded) {

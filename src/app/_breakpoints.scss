@@ -8,6 +8,15 @@ $large-desktop: 1280px;
 $x-large-desktop: 1440px;
 $xx-large-desktop: 1920px;
 
+// Bootstrap
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // generate min-width breakpoint
 @mixin breakpoint($point) {
   @media (min-width: $point) { @content ; }

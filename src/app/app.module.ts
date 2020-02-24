@@ -43,18 +43,24 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
+
 import {AppComponent} from './app.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MenuListItemComponent} from './menu-list-item/menu-list-item.component';
+import {MenuListItemComponent} from './shared/nav-item/menu-list-item/menu-list-item.component';
 import {AppRoutingModule} from './app-routing.module';
-import { NavService } from './nav.service';
-import { TopNavComponent } from './top-nav/top-nav.component';
+import { NavService } from './shared/nav-item/nav.service';
+
 
 
 import { HelpComponent } from './pages/help/help.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DynamicComponent } from './pages/dynamic/dynamic.component';
 import { FormComponent } from './pages/form/form.component';
+
+import { TopBarComponent } from './shared/top-bar/top-bar.component';
+import { VerticalNavigationComponent } from './shared/vertical-navigation/vertical-navigation.component';
+
+
 
 /**
  * NgModule that includes all Material modules that are required.
@@ -100,7 +106,8 @@ import { FormComponent } from './pages/form/form.component';
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
-  ]
+  ],
+  declarations: []
 })
 export class MaterialModule {}
 
@@ -118,11 +125,12 @@ export class MaterialModule {}
   declarations: [
     AppComponent,
     MenuListItemComponent,
-    TopNavComponent,
+    TopBarComponent,
     HelpComponent,
     HomeComponent,
     DynamicComponent,
-    FormComponent
+    FormComponent,
+    VerticalNavigationComponent
   ],
   bootstrap: [AppComponent],
   providers: [NavService]
